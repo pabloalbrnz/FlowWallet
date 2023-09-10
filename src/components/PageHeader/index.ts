@@ -3,7 +3,7 @@ import { Header } from "./Header";
 import { Input } from "./Input";
 
 export const PageHeader = {
-  Header: Header,
+  Root: Header,
   Button: Button,
   Input: Input,
 };

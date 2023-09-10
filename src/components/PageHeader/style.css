@@ -1,0 +1,17 @@
+button .btn-animated {
+  max-width: 0px;
+
+  margin-left: -10px;
+
+  overflow: hidden;
+  white-space: nowrap;
+
+  transition: max-width 2.5s ease;
+  transition: margin-left 1s ease;
+}
+
+button:hover span {
+  max-width: 10rem;
+
+  margin-left: 0;
+}
