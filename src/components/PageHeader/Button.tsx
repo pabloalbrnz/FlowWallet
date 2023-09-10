@@ -5,20 +5,37 @@ interface ButtonProps {
   placeholder?: { text?: string; visible?: boolean };
   icon?: { side: "left" | "right"; element: ReactNode };
   style?: "primary" | "secondary" | "disabled";
+  cursor: "regular" | "pointer" | "not-allowed" | "alias";
 }
 
-export function Button({ style = "primary", ...props }: ButtonProps) {
+export function Button({
+  style = "primary",
+  cursor = "regular",
+  ...props
+}: ButtonProps) {
   let btnStyle: string,
-    disabled = false;
+    disabled = false,
+    btnCursor: string;
+
+  btnCursor =
+    cursor == "pointer"
+      ? "cursor-pointer"
+      : cursor == "not-allowed"
+      ? "cursor-not-allowed"
+      : cursor == "alias"
+      ? "cursor-alias"
+      : "cursor-regular";
 
   switch (style) {
     case "primary":
       btnStyle =
-        "flex gap-2 items-center text-flow-green-dark-100 font-poppins text-md px-4 h-8 border-[1px] border-opacity-25 border-flow-green-dark-50 rounded-sm bg-flow-green-dark-900 transition-all ease-linear hover:rounded-lg hover:border-opacity-100 hover:bg-opacity-100 hover:bg-flow-green-dark-950 hover:text-flow-green-dark-50 focus:border-flow-green-dark-500 box-border cursor-pointer";
+        "flex gap-2 items-center text-flow-green-dark-100 font-poppins text-md px-4 h-8 border-[1px] border-opacity-25 border-flow-green-dark-50 rounded-sm bg-flow-green-dark-900 transition-all ease-linear hover:rounded-lg hover:border-opacity-100 hover:bg-opacity-100 hover:bg-flow-green-dark-950 hover:text-flow-green-dark-50 focus:border-flow-green-dark-500 box-border " +
+        btnCursor;
       break;
     case "secondary":
       btnStyle =
-        "flex gap-2 items-center text-flow-green-dark-950 font-poppins text-md px-4 h-8 border-[1px] border-opacity-25 border-flow-green-dark-50 rounded-sm bg-flow-green-dark-500 transition-all ease-linear hover:rounded-lg hover:border-opacity-100 hover:bg-flow-green-dark-700 hover:text-flow-green-dark-night focus:border-flow-green-dark-500 box-border cursor-pointer";
+        "flex gap-2 items-center text-flow-green-dark-950 font-poppins text-md px-4 h-8 border-[1px] border-opacity-25 border-flow-green-dark-50 rounded-sm bg-flow-green-dark-500 transition-all ease-linear hover:rounded-lg hover:border-opacity-100 hover:bg-flow-green-dark-700 hover:text-flow-green-dark-night focus:border-flow-green-dark-500 box-border " +
+        btnCursor;
       break;
     case "disabled":
       btnStyle =

@@ -1,5 +1,5 @@
 import "./style.css";
-import { House } from "@phosphor-icons/react";
+import { ChatCircleText, House } from "@phosphor-icons/react";
 import { PageHeader } from ".";
 import * as Avatar from "@radix-ui/react-avatar";
 
@@ -10,18 +10,24 @@ export function LoggedPageHeader() {
         <PageHeader.Button
           style="primary"
           icon={{ side: "left", element: <House weight="fill" /> }}
-          placeholder={{ text: "Home", visible: false }}
+          placeholder={{ text: "Home", visible: false }} cursor="pointer"
         />
         <PageHeader.Button
           style="primary"
-          placeholder={{ text: "In/Outflows" }}
+          placeholder={{ text: "In/Outflows" }} cursor="pointer"
         />
-        <PageHeader.Button style="primary" placeholder={{ text: "Calendar" }} />
+        <PageHeader.Button style="primary" placeholder={{ text: "Calendar" }} cursor="pointer" />
       </div>
       <span className="font-saira text-3xl text-flow-green-dark-50 transition-all ease-linear hover:text-flow-green-dark-500 hover:drop-shadow-[0_2px_5px_rgba(210,238,222,0.25)] cursor-default">
         Flow Wallet
       </span>
       <div className="flex gap-4 w-[30rem] justify-end">
+        <PageHeader.Button
+          style="primary"
+          icon={{ side: "right", element: <ChatCircleText weight="fill" /> }}
+          placeholder={{ text: "Support", visible: true }}
+           cursor="alias"
+        />
         <PageHeader.Input />
         <Avatar.Root className="bg-flow-green-dark-700 inline-flex h-8 w-8 select-none items-center justify-center overflow-hidden rounded-full align-middle hover:border-4 hover:border-flow-green-dark-800">
           <Avatar.Image

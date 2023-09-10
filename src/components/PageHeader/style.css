@@ -10,7 +10,7 @@ button .btn-animated {
   transition: margin-left 1s ease;
 }
 
-button:hover span {
+button:hover span, button:focus span {
   max-width: 10rem;
 
   margin-left: 0;
