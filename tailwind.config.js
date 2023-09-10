@@ -21,6 +21,7 @@ export default {
       },
       fontFamily: {
         poppins: ['"Poppins"', "sans-serif"],
+        saira: ['"Saira Extra Condensed"', "sans-serif"],
       },
     },
   },
