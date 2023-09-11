@@ -12,3 +12,24 @@
   outline: none;
   box-sizing: border-box;
 }
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: theme(colors.flow-green-dark.500)
+    theme(colors.flow-green-dark.950);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: theme(colors.flow-green-dark.950);
+  border-radius: 3px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: theme(colors.flow-green-dark.500);
+  border-radius: 3px;
+}

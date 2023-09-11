@@ -8,13 +8,13 @@ export function LoginPageHeader() {
         <PageHeader.Button
           style="primary"
           icon={{ side: "left", element: <House weight="fill" /> }}
-          placeholder={{ text: "Home", visible: false }}
+          placeholder={{ text: "Início", visible: false }}
           cursor="pointer"
         />
         <PageHeader.Button
           style="primary"
           icon={{ side: "right", element: <ChatCircleText weight="fill" /> }}
-          placeholder={{ text: "Support", visible: true }}
+          placeholder={{ text: "Suporte", visible: true }}
           cursor="alias"
         />
       </div>
@@ -24,13 +24,13 @@ export function LoginPageHeader() {
       <div className="flex gap-4 justify-end w-[30rem]">
         <PageHeader.Button
           style="secondary"
-          placeholder={{ text: "Login", visible: true }}
+          placeholder={{ text: "Entrar", visible: true }}
           icon={{ side: "right", element: <SignIn /> }}
           cursor="pointer"
         />
         <PageHeader.Button
           style="primary"
-          placeholder={{ text: "Register" }}
+          placeholder={{ text: "Cadastre-se" }}
           cursor="pointer"
         />
       </div>
