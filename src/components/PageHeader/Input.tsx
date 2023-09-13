@@ -2,7 +2,7 @@ import { MagnifyingGlass } from "@phosphor-icons/react";
 
 export function Input() {
   return (
-    <div className="flex items-center h-8 border-[1px] border-flow-green-dark-50 border-opacity-50 rounded-sm overflow-hidden bg-flow-green-dark-500 bg-opacity-25 focus-within:border-flow-green-dark-500">
+    <div className="flex items-center h-8 border border-flow-green-dark-50 border-opacity-50 rounded-sm overflow-hidden bg-flow-green-dark-500 bg-opacity-25 focus-within:border-flow-green-dark-500">
       <input
         type="search"
         placeholder="Gasto..."

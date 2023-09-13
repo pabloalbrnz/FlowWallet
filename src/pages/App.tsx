@@ -1,3 +1,5 @@
+import { ArrowRight } from "@phosphor-icons/react";
+import { CTAButton } from "../components/CTAButton/Button";
 import { LoggedPageHeader } from "../components/PageHeader/LoggedPageHeader";
 import { LoginPageHeader } from "../components/PageHeader/LoginPageHeader";
 
@@ -13,8 +15,8 @@ export function App({ logged = true }: AppProps) {
       </div>
       <div className="flex h-full w-[calc(100%-8rem)] mt-4 bg-flow-green-dark-night bg-opacity-80 self-center rounded-sm border-[1px] border-flow-green-dark-100 overflow-y-scroll">
         <div className="flex w-full h-[32rem] p-16 ">
-          <div className="flex w-[50%]">
-            <h1 className="font-bold font-poppins text-5xl tracking-tighter text-flow-green-dark-700 mt-16 leading-[3.5rem]">
+          <div className="flex w-[50%] flex-col justify-center gap-8">
+            <h1 className="font-bold font-poppins text-5xl tracking-tighter text-flow-green-dark-700 leading-[3.5rem]">
               Mantenha seus{" "}
               <b className="text-flow-green-dark-500 underline">gastos</b>
               <br />
@@ -29,6 +31,15 @@ export function App({ logged = true }: AppProps) {
               </b>
               !!
             </h1>
+            <div className="flex justify-end">
+              <CTAButton
+                placeholder={{
+                  text: "Entre já!",
+                  icon: <ArrowRight weight="bold" />,
+                }}
+                mergeClass="w-full"
+              />
+            </div>
           </div>
           <div className="flex w-[50%] items-center justify-center">
             <span className="font-bold font-poppins text-[10rem] text-pink-500 -translate-y-28 translate-x-16 rotate-[-20deg] drop-shadow-md">
